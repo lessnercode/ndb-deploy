@@ -1,0 +1,4 @@
+interface:
+  display_name: "NDB Deployment"
+  short_description: "Deploy NDB and prepare database profiles"
+  default_prompt: "Use $ndb-deploy to deploy NDB on AHV using the local wiki and stop at the requested scope."

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*credentials*.json
+*.pending
+*state.json
+*.qcow2
+*.part

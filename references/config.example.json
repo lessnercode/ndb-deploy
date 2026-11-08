@@ -1,0 +1,36 @@
+{
+  "wiki_path": "/absolute/path/to/wiki/ndb",
+  "credentials_file": "/absolute/path/to/work/.ndb-credentials.json",
+  "state_file": "/absolute/path/to/work/ndb-state.json",
+  "prism": {"url": "https://prism-central.example.com:9440"},
+  "ndb": {"url": "https://192.0.2.140", "tls": {"allow_self_signed": true}},
+  "cluster_name": "TARGET-CLUSTER",
+  "pe_address": "192.0.2.37",
+  "database_container": "ndb",
+  "subnet_name": "secondary",
+  "database_network_type": "DHCP",
+  "deployment": {
+    "name": "NDB-RELEASE",
+    "cluster_id": "REPLACE-CLUSTER-UUID",
+    "subnet_id": "REPLACE-SUBNET-UUID",
+    "boot_container_id": "REPLACE-IMAGE-SOURCE-CONTAINER-UUID",
+    "static_ip": "192.0.2.140",
+    "prefix_length": 25,
+    "gateway": "192.0.2.129",
+    "dns": "192.0.2.6",
+    "sockets": 8,
+    "cores_per_socket": 2,
+    "memory_gib": 16
+  },
+  "image": {
+    "name": "NDB-RELEASE-AHV",
+    "file": "/absolute/path/to/NDB-RELEASE.qcow2",
+    "checksum_algorithm": "sha256",
+    "checksum": "REPLACE-PUBLISHED-CHECKSUM",
+    "source_url": "http://192.0.2.240:8765/NDB-RELEASE.qcow2"
+  },
+  "profiles": [
+    {"engine": "sqlserver_database", "label": "SQLSERVER_SECONDARY"},
+    {"engine": "postgres_database", "label": "POSTGRES_VECTOR_SECONDARY"}
+  ]
+}
